@@ -1,0 +1,292 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap');
+
+
+:root, body {
+    margin:0;
+    padding:0;
+
+    font-family: 'Poppins', sans-serif;
+
+    --accent-color: #3498DB;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+#bold {
+    font-weight: 700;
+}
+
+.svg{
+    width: 1em;
+    height: 1em;
+
+    filter: brightness(0) saturate(100%) invert(0%) sepia(99%) saturate(7462%) hue-rotate(41deg) brightness(110%) contrast(96%);
+}
+
+a {
+    color: var(--accent-color);
+    text-decoration: none;
+    background-color: #3498db33;
+    box-sizing: border-box;
+    padding: 0.1em 0.3em;
+    border-radius: 0.5em;
+}
+
+.presentation-section {
+    width: 100vw;
+
+    margin: 2em 0;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#big-photo{
+    width: 100vw;
+    min-height: 20em;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#big-photo img {
+    width: 10em;
+    height: 10em;
+}
+
+#big-photo h1 {
+    margin: 0;
+}
+
+#presentation-list {
+    width: 100vw;
+    height: 12em;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#presentation-list ul{
+    min-width: 15em;
+
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+}
+
+#presentation-list li{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    min-width: 10em;
+    margin: 1em 0;
+}
+
+#presentation-list li div{
+    max-width: 60vw;
+}
+
+#svg-list {
+    margin: 0 1em;
+}
+
+.web-section, .design-section, .contact {
+    width: 90vw;
+    margin: 2em 0;
+
+    border-radius: 2em;
+    box-shadow: 0 0 2em 0.5em rgba(0,0,0,0.1);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#web-title, #design-title, #contact-title {
+    width: 90vw;
+    max-height: 4em;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    background-color: var(--accent-color);
+    color: #fff;
+    border-radius: 2em 2em 0 0;
+}
+
+#svg-section {
+    margin-right: 1em;
+    filter: brightness(0) saturate(100%) invert(100%) sepia(12%) saturate(7500%) hue-rotate(226deg) brightness(116%) contrast(110%);
+}
+
+.web-content, #web-right, #web-left, .design-content, #design-left, #design-right, #contact-inner {
+    width: 80vw;
+}
+
+#web-right, #web-left, #design-left, #design-right, #contact-inner {
+    margin: 2em 0;
+}
+
+.contact {
+    margin: 4em 0 0 0;
+}
+
+.showreel {
+    width: 90vw;
+}
+
+.showreel-el {
+    width: 90vw;
+    margin-top: 4em;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    border-radius: 2em;
+    box-shadow: 0 0 2em 0.5em rgba(0,0,0,0.1);
+}
+
+.showreel-el img {
+    width: 90vw;
+    border-radius: 2em 2em 0 0;
+}
+
+.showreel-el div {
+    width: 80vw;
+    margin: 1em 0 2em 0;
+}
+
+footer {
+    width: 100vw;
+    margin: 4em 0 1em 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (min-width: 1140px){
+    .presentation-section{
+        height: 80vh;
+    }
+
+    #big-photo {
+        width: 30em;
+        flex-direction: row;
+    }
+
+    #big-photo img {
+        width: clamp(10em, 15vw, 12em);
+        height: clamp(10em, 15vw, 12em);
+    }
+
+    #big-photo h1{
+        width: 4em;
+
+        justify-content: flex-start;
+
+        font-size: 3em;
+    }
+
+    #presentation-list {
+        width: 24em;
+        justify-content: space-between;
+    }
+
+    .web-section, .design-section {
+        width: 60vw;
+
+        margin: 2em 0 6em 0;
+
+        z-index: 1;
+    }
+
+    .design-section {
+        margin-bottom: 2em;
+    }
+
+    #web-title, #design-title {
+        width: 60vw;
+
+        position: absolute;
+        margin-top: -2em;
+        width: 20vw;
+        border-radius: 3em;
+        z-index: 2;
+    }
+
+    .web-content, .design-content {
+        width: 55vw;
+
+        margin-top: 1em;
+
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    #web-right, #web-left, #design-left, #design-right {
+        max-width: fit-content;
+    }
+
+    .contact {
+        width: 40vw;
+        margin: 8em 0 0 0;
+    }
+
+    #contact-title {
+        width: 20vw;
+        margin: -2em 15vw 0 0;
+
+        z-index: 2;
+        position: absolute;
+
+        border-radius: 2em;
+    }
+
+    #contact-content {
+        width: 30vw;
+
+        z-index: 1;
+
+        margin-top: 2em;
+    }
+
+    .showreel {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .showreel-el {
+        width: 25vw;
+    }
+
+    .showreel-el img {
+        width: 25vw;
+    }
+
+    .showreel-el div {
+        width: 22vw;
+        margin-bottom: 1em;
+    }
+
+    footer {
+        margin-top: 5em;
+    }
+}
